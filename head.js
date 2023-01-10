@@ -1,6 +1,19 @@
-const assertEqual = function (head) {
-  console.log(head[0])
+const assertEqual = function(actual, expected) {
+  if(actual !== expected){
+    console.log("fail");
+  } else{
+    console.log("Pass");
+  } 
+};  
+
+
+function tail(array) {
+  return array[0]
+
 }
 
-assertEqual(['Hello', 'Lighthouse', 'Labs'])
-assertEqual([5, 6, 7])
+assertEqual(head([5,6,7]), 5);
+assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
+
+
+
