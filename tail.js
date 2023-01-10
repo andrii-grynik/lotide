@@ -1,4 +1,4 @@
-const assertEqual = function (head) {
+const assertEqual = function (tail) {
   console.log(head.slice(1))
 }
 
