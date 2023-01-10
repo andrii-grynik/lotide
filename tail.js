@@ -1,5 +1,5 @@
 const assertEqual = function (tail) {
-  console.log(head.slice(1))
+  console.log(tail.slice(1))
 }
 
 assertEqual(['Hello', 'Lighthouse', 'Labs'])
