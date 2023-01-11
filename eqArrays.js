@@ -9,7 +9,5 @@ const eqArrays = function(array1, array2) {
   return areEqual;
 };
 
-module.exports = eqArrays;
-
 console.log(eqArrays([1, 2, 3], [1, 2, 3]));
 console.log(eqArrays([1, 2, 3], ["1", "2", "3"]));
