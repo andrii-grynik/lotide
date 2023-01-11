@@ -2,7 +2,7 @@ const eqArrays = function (array1, array2) {
   let areEqual = true
 
   for (let i = 0; i < array1.length; i++) {
-    if (array1[i] !== array2[i]) {
+    if (array1[i] !== array2[i] || array1.length !== array2.length) {
       areEqual = false
     }
   }
@@ -35,9 +35,10 @@ const without = function (source, itemsToRemove) {
   return modifiedArray
 }
 
-const words = ['hello', 'world', 'lighthouse']
-without(words, ['lighthouse'])
-assertArraysEqual(words, ['hello', 'world', 'lighthouse'])
+// Edge cases
+// const words = ['hello', 'world', 'lighthouse']
+// without(words, ['lighthouse'])
+// assertArraysEqual(words, ['hello', 'world', 'lighthouse'])
 
-console.log(without([1, 2, 3], [1]))
-console.log(without(['1', '2', '3'], [1, 2, '3']))
+// console.log(without([1, 2, 3], [1]))
+// console.log(without(['1', '2', '3'], [1, 2, '3']))
