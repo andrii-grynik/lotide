@@ -1,8 +1,8 @@
 const assertEqual = function (actual, expected) {
-  if (actual !== expected) {
-    console.log('Fail')
+  if (actual === expected) {
+    console.log(`< (o_O) (o_O) (o_O) > Assertion Passed: ${actual} === ${expected}`)
   } else {
-    console.log('Pass')
+    console.log(`< (T_T) (T_T) (T_T) > Assertion Failed: ${actual} !== ${expected}`)
   }
 }
 
@@ -17,6 +17,7 @@ const eqArrays = function (array1, array2) {
   return areEqual
 }
 
+//adding eqObjects
 const eqObjects = function (object1, object2) {
   if (Object.keys(object1).length !== Object.keys(object2).length) {
     return false
@@ -36,13 +37,12 @@ const eqObjects = function (object1, object2) {
   return true
 }
 
-// Edge Cases
+/* Edge Cases
 
-//const kl = { k: '1', l: '2' }
-//const lk = { l: '2', k: '1' }
-//assertEqual(eqObjects(kl, lk), true)
+const kl = { k: '1', l: '2' }
+const lk = { l: '2', k: '1' }
+assertEqual(eqObjects(kl, lk), true)
 
-//const jkl = { j: '1', k: '2', l: '3' }
-//assertEqual(eqObjects(kl, jkl), false)
-
-
+const jkl = { j: '1', k: '2', l: '3' }
+assertEqual(eqObjects(kl, jkl), false)
+*/
