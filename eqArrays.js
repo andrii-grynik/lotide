@@ -1,8 +1,8 @@
 const assertEqual = function (actual, expected) {
-  if (actual !== expected) {
-    console.log('fail')
+  if (actual === expected) {
+    console.log(`< (o_O) (o_O) (o_O) > Assertion Passed: ${actual} === ${expected}`)
   } else {
-    console.log('Pass')
+    console.log(`< (T_T) (T_T) (T_T) > Assertion Failed: ${actual} !== ${expected}`)
   }
 }
 
@@ -17,9 +17,9 @@ const eqArrays = function (array1, array2) {
   return areEqual
 }
 
+/* Edge Cases
+console.log(eqArrays([1, 2, 3], [1, 2, 3]))
+console.log(eqArrays([1, 2, 3], ['1', '2', '3']))
 
-//Edge Cases
-//console.log(eqArrays([1, 2, 3], [1, 2, 3]))
-//console.log(eqArrays([1, 2, 3], ['1', '2', '3']))
-
-//assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true) // => should PASS
+assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true) // => should PASS
+*/
