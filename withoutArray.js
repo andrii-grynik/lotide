@@ -17,31 +17,31 @@ const assertArraysEqual = function (array1, array2) {
   }
 }
 
-// adding without assigment 
-const without = function (source, itemsToRemove) {
-  const modifiedArray = []
+// adding middle assigment
+const middle = function (array) {
+  const returnArray = []
 
-  for (let i = 0; i < source.length; i++) {
-    let shouldRemove = false
-    for (let j = 0; j < itemsToRemove.length; j++) {
-      if (source[i] === itemsToRemove[j]) {
-        shouldRemove = true
-      }
+  if (array.length > 2) {
+    const middle = array.length / 2 - 1
+    if (array.length % 2 !== 0) {
+      returnArray.push((array[Math.ceil(middle)]))
+    } else {
+      returnArray.push(array[middle], array[middle + 1])
     }
-    if (!shouldRemove) {
-      modifiedArray.push(source[i])
-      shouldRemove = false
-    }
+    return returnArray
+  } else {
+    return []
   }
-  return modifiedArray
 }
 
+/* Edge Cases
+console.log(middle([1, 2, 3])) // => [2]
+console.log(middle([1, 2, 3, 4, 5])) // => [3]
+console.log(middle([1, 2, 3, 4])) // => [2, 3]
+console.log(middle([1, 2, 3, 4, 5, 6])) // => [3, 4]
 
-/*Edge Cases
-const words = ['hello', 'world', 'lighthouse']
-without(words, ['lighthouse'])
-assertArraysEqual(words, ['hello', 'world', 'lighthouse'])
 
-console.log(without([1, 2, 3], [1]))
-console.log(without(['1', '2', '3'], [1, 2, '3']))
+const words = [1, 2, 3]
+middle(words, ['2'])
+assertArraysEqual(words, [1, 2, 3])
 */
