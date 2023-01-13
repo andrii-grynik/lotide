@@ -6,6 +6,7 @@ const assertEqual = function (actual, expected) {
   }
 }
 
+//adding countLetters assigment 
 const countLetters = function (string) {
   const letterCount = {}
 
