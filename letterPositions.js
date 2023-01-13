@@ -17,6 +17,7 @@ const assertArraysEqual = function (array1, array2) {
   }
 }
 
+//adding letterPositions assigment
 const letterPositions = function (string) {
   const results = {}
   let i = 0
