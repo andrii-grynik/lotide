@@ -11,12 +11,13 @@ const eqArrays = function (array1, array2) {
 
 const assertArraysEqual = function (array1, array2) {
   if (eqArrays(array1, array2)) {
-    console.log(`${array1} === ${array2}\nThese arrays are equal :)`)
+    console.log(`${array1} === ${array2}\nThese arrays are equal "All GooD BoSS!"`)
   } else {
-    console.log(`${array1} !== ${array2}\nThese arrays are not equal :(`)
+    console.log(`${array1} !== ${array2}\nThese arrays are not equal " Do We have A Problem Here??!"`)
   }
 }
 
+// adding without assigment 
 const without = function (source, itemsToRemove) {
   const modifiedArray = []
 
@@ -35,10 +36,12 @@ const without = function (source, itemsToRemove) {
   return modifiedArray
 }
 
-// Edge cases
-// const words = ['hello', 'world', 'lighthouse']
-// without(words, ['lighthouse'])
-// assertArraysEqual(words, ['hello', 'world', 'lighthouse'])
 
-// console.log(without([1, 2, 3], [1]))
-// console.log(without(['1', '2', '3'], [1, 2, '3']))
+/*Edge Cases
+const words = ['hello', 'world', 'lighthouse']
+without(words, ['lighthouse'])
+assertArraysEqual(words, ['hello', 'world', 'lighthouse'])
+
+console.log(without([1, 2, 3], [1]))
+console.log(without(['1', '2', '3'], [1, 2, '3']))
+*/
