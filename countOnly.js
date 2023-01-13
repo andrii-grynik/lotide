@@ -21,7 +21,7 @@ const countOnly = function (allItems, itemsToCount) {
   return results
 }
 
-/* Test Conditions, remove comment mark in order to test
+/* Edge Cases
 const firstNames = [
   'Karl',
   'Salima',
