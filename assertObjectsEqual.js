@@ -33,18 +33,19 @@ const assertObjectsEqual = function (actual, expected) {
   if (eqObjects(actual, expected)) {
     console.log(`✅✅✅ Assertion Passed: ${inspect(actual)} === ${inspect(expected)}`)
   } else {
-    console.log(`🛑🛑🛑 node assertObjectsEqual.jsAssertion Failed:  ${inspect(actual)} !== ${inspect(expected)}`)
+    console.log(`🛑🛑🛑 Assertion Failed: ${inspect(actual)} !== ${inspect(expected)}`)
   }
 }
 
 /* Edge Cases
 
 assertObjectsEqual(eqObjects([1, 2, 3], [1, 2, 3]), true) // => true
-
 const ab = { a: '1', b: '2' }
 const ba = { b: '2', a: '1' }
-// //eqObjects(ab, ba); // => true
+
+assertObjectsEqual(eqObjects(ab, ba), true)
 
 const abc = { a: '1', b: '2', c: '3' }
-// //eqObjects(ab, abc); // => false
+
+assertObjectsEqual(eqObjects(ab, abc), false)
 */
