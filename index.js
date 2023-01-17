@@ -6,8 +6,6 @@ const eqArrays = require('./eqArrays')
 const assertArraysEqual = require('./assertArraysEqual')
 const eqObjects = require('./eqObjects')
 const assertObjectsEqual = require('./assertObjectsEqual')
-
-
 const countLetters = require('./countLetters')
 const countOnly = require('./countOnly')
 const findKey = require('./findKey')
