@@ -1,12 +1,5 @@
-const assertEqual = function (actual, expected) {
-  if (actual === expected) {
-    console.log(`< (o_O) (o_O) (o_O) > Assertion Passed: ${actual} === ${expected}`) 
-  } else {
-    console.log(`< (T_T) (T_T) (T_T) > Assertion Failed: ${actual} !== ${expected}`)
-  }
-}
+const assertEqual = require('./assertEqual')
 
-// adding count only assigment 
 const countOnly = function (allItems, itemsToCount) {
   const results = {}
   for (const item of allItems) {
@@ -22,7 +15,9 @@ const countOnly = function (allItems, itemsToCount) {
   return results
 }
 
-/* Edge Cases
+module.export = countOnly;
+
+/* Test Case
 const firstNames = [
   'Karl',
   'Salima',

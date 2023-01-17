@@ -1,12 +1,6 @@
-const assertEqual = function (actual, expected) {
-  if (actual === expected) {
-    console.log(`< (o_O) (o_O) (o_O) > Assertion Passed: ${actual} === ${expected}`)
-  } else {
-    console.log(`< (T_T) (T_T) (T_T) > Assertion Failed: ${actual} !== ${expected}`)
-  }
-}
+const assertEqual = require('./assertEqual')
 
-//adding countLetters assigment 
+
 const countLetters = function (string) {
   const letterCount = {}
 
@@ -22,5 +16,7 @@ const countLetters = function (string) {
   return letterCount
 }
 
-// Edge Case
+module.export = countLetters;
+
+// Test
 // console.log(countLetters("Before implementing this function, we need to think about how it will report back these counts. It's not that we want to know how many H's are in this sentence?, because that would just be a number. We need it report back multiple numbers."))

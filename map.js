@@ -1,21 +1,5 @@
-const eqArrays = function (array1, array2) {
-  let areEqual = true
-
-  for (let i = 0; i < array1.length; i++) {
-    if (array1[i] !== array2[i] || array1.length !== array2.length) {
-      areEqual = false
-    }
-  }
-  return areEqual
-}
-
-const assertArraysEqual = function (array1, array2) {
-  if (eqArrays(array1, array2)) {
-    console.log(`${array1} === ${array2}\nThese arrays are equal "All GooD BoSS!"`)
-  } else {
-    console.log(`${array1} !== ${array2}\nThese arrays are not equal " Do We have A Problem Here??!"`)
-  }
-}
+const eqArrays = require('./eqArrays')
+const assertArraysEqual = require('./assertArraysEqual')
 
 const words = ['ground', 'control', 'to', 'major', 'tom']
 const map = function (array, callback) {
@@ -26,7 +10,9 @@ const map = function (array, callback) {
   return results
 }
 
-/* Edge Cases
+module.export = map;
+
+/* Test Case
 
 const results1 = map(words, word => word[0])
 assertArraysEqual(results1, ['g', 'c', 't', 'm', 't'])

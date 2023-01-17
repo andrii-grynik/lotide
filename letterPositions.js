@@ -1,23 +1,7 @@
-const eqArrays = function (array1, array2) {
-  let areEqual = true
+const eqArrays = require('./eqArrays')
+const assertArraysEqual = require('./assertArraysEqual')
 
-  for (let i = 0; i < array1.length; i++) {
-    if (array1[i] !== array2[i] || array1.length !== array2.length) {
-      areEqual = false
-    }
-  }
-  return areEqual
-}
 
-const assertArraysEqual = function (array1, array2) {
-  if (eqArrays(array1, array2)) {
-    console.log(`${array1} === ${array2}\nThese arrays are equal "All GooD BoSS!"`)
-  } else {
-    console.log(`${array1} !== ${array2}\nThese arrays are not equal " Do We have A Problem Here??!"`)
-  }
-}
-
-//adding letterPositions assigment
 const letterPositions = function (string) {
   const results = {}
   let i = 0
@@ -35,8 +19,9 @@ const letterPositions = function (string) {
   return results
 }
 
+module.export = letterPositions;
 
-/* Edge Cases
+/* Test Case
 
 assertArraysEqual(letterPositions('hello').h, [0])
 assertArraysEqual(letterPositions('hello').e, [1])

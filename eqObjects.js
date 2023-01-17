@@ -1,23 +1,7 @@
-const assertEqual = function (actual, expected) {
-  if (actual === expected) {
-    console.log(`< (o_O) (o_O) (o_O) > Assertion Passed: ${actual} === ${expected}`)
-  } else {
-    console.log(`< (T_T) (T_T) (T_T) > Assertion Failed: ${actual} !== ${expected}`)
-  }
-}
+const assertEqual = require('./assertEqual')
+const eqArrays = require('./eqArrays')
 
-const eqArrays = function (array1, array2) {
-  let areEqual = true
 
-  for (let i = 0; i < array1.length; i++) {
-    if (array1[i] !== array2[i] || array1.length !== array2.length) {
-      areEqual = false
-    }
-  }
-  return areEqual
-}
-
-//adding eqObjects
 const eqObjects = function (object1, object2) {
   if (Object.keys(object1).length !== Object.keys(object2).length) {
     return false
@@ -37,7 +21,9 @@ const eqObjects = function (object1, object2) {
   return true
 }
 
-/* Edge Cases
+module.export - eqObjects;
+
+/* Test
 
 const kl = { k: '1', l: '2' }
 const lk = { l: '2', k: '1' }

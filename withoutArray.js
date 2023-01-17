@@ -1,23 +1,9 @@
-const eqArrays = function (array1, array2) {
-  let areEqual = true
+const eqArrays = require('./eqArrays')
 
-  for (let i = 0; i < array1.length; i++) {
-    if (array1[i] !== array2[i] || array1.length !== array2.length) {
-      areEqual = false
-    }
-  }
-  return areEqual
-}
+const assertArraysEqual = require('./assertArraysEqual')
 
-const assertArraysEqual = function (array1, array2) {
-  if (eqArrays(array1, array2)) {
-    console.log(`${array1} === ${array2}\nThese arrays are equal "All GooD BoSS!"`)
-  } else {
-    console.log(`${array1} !== ${array2}\nThese arrays are not equal " Do We have A Problem Here??!"`)
-  }
-}
 
-// adding without assigment 
+
 const without = function (source, itemsToRemove) {
   const modifiedArray = []
 
@@ -36,8 +22,9 @@ const without = function (source, itemsToRemove) {
   return modifiedArray
 }
 
+module.export = without;
 
-/*Edge Cases
+/*Test Case
 const words = ['hello', 'world', 'lighthouse']
 without(words, ['lighthouse'])
 assertArraysEqual(words, ['hello', 'world', 'lighthouse'])
